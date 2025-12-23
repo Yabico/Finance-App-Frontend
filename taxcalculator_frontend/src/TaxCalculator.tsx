@@ -82,8 +82,8 @@ const TaxCalculator: React.FC = () => {
 
             const data = await response.json();
             setResult({
-                totalTax: data.taxPaid,
-                effectiveRate: (data.taxPaid / parseFloat(formData.grossIncome)) * 100,
+                totalTax: data.totalTaxPaid,
+                effectiveRate: (data.totalTaxPaid / parseFloat(formData.grossIncome)) * 100,
                 logs: []
             });
             console.log(`Response: ${JSON.stringify(data)}`);
