@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usePlaidLink } from 'react-plaid-link';
+import { plaidApi } from "../api/axios.ts";
 
 interface Props {
     onLinkSuccess: (publicToken: string) => void;
@@ -34,11 +35,9 @@ const PlaidLinkSection: React.FC<Props> = ({ onLinkSuccess }) => {
     const handleConnectClick = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch("https://baee2wl750.execute-api.us-east-1.amazonaws.com/prod/link-token", {
-                method: "POST"
-            });
+            const response = await plaidApi.post("/link-token")
 
-            const data = await response.json();
+            const data = response.data;
             console.log("Fetched Link Token:", data.link_token);
 
             setLinkToken(data.link_token);

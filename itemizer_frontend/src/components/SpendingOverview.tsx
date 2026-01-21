@@ -1,7 +1,7 @@
 // src/components/SpendingOverview.tsx
 import React, { useMemo } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import type { Transaction } from '../types';
+import type { Transaction } from '../types/types.ts';
 import { calculateCategoryTotals } from '../utils';
 
 // Shared colors for Chart and Legend

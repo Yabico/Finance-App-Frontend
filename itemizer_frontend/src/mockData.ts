@@ -1,6 +1,6 @@
 // src/mockData.ts
 // src/mockData.ts
-import type {Transaction} from './types';
+import type {Transaction} from './types/types.ts';
 
 export const TRANSACTIONS: Transaction[] = [
     {

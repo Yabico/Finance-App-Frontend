@@ -4,7 +4,7 @@ import { useTransactions } from '../hooks/useTransactions';
 import FilterSidebar from '../components/FilterSidebar';
 import TransactionDetails from '../components/TransactionDetails';
 import { ArrowLeft, Download } from 'lucide-react';
-import type {Transaction} from "../types.ts";
+import type {Transaction} from "../types/types.ts";
 import CategoryModal from "../components/CategoryModal.tsx";
 
 const FullTransactionsPage: React.FC = () => {

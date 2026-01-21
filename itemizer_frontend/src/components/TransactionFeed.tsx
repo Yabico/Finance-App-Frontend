@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Transaction } from '../types';
+import type { Transaction } from '../types/types.ts';
 import { Link } from 'react-router';
 
 interface TransactionFeedProps {

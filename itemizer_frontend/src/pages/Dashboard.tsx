@@ -3,7 +3,7 @@ import {useTransactions} from "../hooks/useTransactions.ts";
 import {useMemo, useState} from "react";
 import FilterSidebar from "../components/FilterSidebar.tsx";
 import TransactionFeed from "../components/TransactionFeed.tsx";
-import type {Transaction} from "../types.ts";
+import type {Transaction} from "../types/types.ts";
 import SpendingOverview from "../components/SpendingOverview.tsx";
 import TransactionDetails from "../components/TransactionDetails.tsx";
 import CategoryModal from "../components/CategoryModal.tsx";

@@ -5,7 +5,9 @@ import {
     DATE_RANGES,
     type Account,
     type syncResult,
-} from '../types';
+} from '../types/types.ts';
+import { plaidApi } from '../api/axios';
+
 
 export const useTransactions = () => {
 
@@ -48,15 +50,11 @@ export const useTransactions = () => {
     const handlePlaidSuccess = async (publicToken: string) => {
         setIsSyncing(true);
         try {
-            const response = await fetch("https://baee2wl750.execute-api.us-east-1.amazonaws.com/prod/exchange-token", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ public_token: publicToken })
+            const response = await plaidApi.post<syncResult>("/exchange-token", {
+                public_token: publicToken
             });
 
-            if (!response.ok) throw new Error("Failed to exchange token");
-
-            const data: syncResult = await response.json();
+            const data: syncResult = response.data;
             console.log("Response data", data);
             const bankName = data.institutionInfo.name;
             const incomingAccounts: Account[] = data.accounts.map((acc: Account) => ({

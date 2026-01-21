@@ -1,4 +1,4 @@
-import type {Account} from "../types.ts";
+import type {Account} from "../types/types.ts";
 
 const AccountManager = ({ accounts }: { accounts: Account[] }) => (
     <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">

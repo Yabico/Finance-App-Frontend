@@ -1,6 +1,6 @@
 // src/components/CategoryModal.tsx
 import React from 'react';
-import type { Transaction } from '../types';
+import type { Transaction } from '../types/types.ts';
 
 // Define standard categories for your app
 const CATEGORIES = ["Groceries", "Entertainment", "Income", "Transport", "Shopping", "Utilities", "Health", "Dining"];

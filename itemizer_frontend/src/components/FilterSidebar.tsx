@@ -1,6 +1,6 @@
 // src/components/FilterSidebar.tsx
 import React from 'react';
-import { DATE_RANGES, type DateRangeKey, type FilterState } from "../types.ts";
+import { DATE_RANGES, type DateRangeKey, type FilterState } from "../types/types.ts";
 
 interface FilterSidebarProps {
     filters: FilterState;

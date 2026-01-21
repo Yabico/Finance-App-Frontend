@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Landmark, CreditCard, Wallet, ChevronLeft, ChevronRight } from 'lucide-react';
-import { type Account } from '../types';
+import { type Account } from '../types/types.ts';
 import {Link} from "react-router";
 
 interface Props {
